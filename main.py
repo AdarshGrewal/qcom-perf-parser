@@ -28,6 +28,10 @@ if __name__ == '__main__':
     parser.add_argument(
         '-trc', '--targetresourceconfigs', help='Path to targetresourceconfigs.xml', required=False
     )
+    parser.add_argument(
+        '-t', '--target', help='target platform, for example: volcano', required=True
+    )
+
     argument = parser.parse_args()
 
     perfboostsconfig_path = argument.perfboostsconfig or os.path.join(
@@ -64,6 +68,7 @@ if __name__ == '__main__':
                 b
                 for b in perfboosts + powerhints
                 if b.id == boost_id
+                and argument.target in b.target
                 and (boost_type is None or b.type == boost_type)
                 and (boost_fps is None or boost_fps in b.fps)
             ),
