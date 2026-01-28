@@ -125,7 +125,7 @@ if __name__ == '__main__':
                 target_info=target_info,
             )
 
-            resolver = resource_resolvers.get(resource_key, lambda ctx: [(ctx.node, ctx.raw_value)])
+            resolver = resource_resolvers.get(resource_key, lambda ctx: [(ctx.node, str(ctx.raw_value))])
             for path, value in resolver(ctx):
                 grouped_by_path[(path, resource_key)].append(value)
 
