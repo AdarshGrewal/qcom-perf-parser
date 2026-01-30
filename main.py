@@ -129,7 +129,7 @@ if __name__ == '__main__':
             for path, value in resolver(ctx):
                 grouped_by_path[(path, resource_key)].append(value)
 
-        for node, values in grouped_by_path.items():
+        for (path, resource_key), values in grouped_by_path.items():
             combiner = resource_combiners.get(resource_key, lambda values: values[0])
             value = combiner(values)
-            print(f'{node} : {value}')
+            print(f'({path}, {resource_key}): {value}')
