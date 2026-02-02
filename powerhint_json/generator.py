@@ -33,7 +33,7 @@ def generate_powerhint_json(powerhints: List[PowerHint], path: str) -> None:
             node_path, value = action
             node_name = _generate_name(node_path)
             if node_path not in nodes_lookup:
-                if node_path == "/dev/cpu_dma_latency":
+                if node_path == '/dev/cpu_dma_latency':
                     current_value = subprocess.check_output(
                         [
                             'adb',

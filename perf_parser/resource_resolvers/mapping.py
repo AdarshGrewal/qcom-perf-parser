@@ -20,10 +20,7 @@ resource_resolvers: Dict[ResourceKey, ResourceResolver] = {
     (0x3, 0x3D): sched_migrate.resolve_sched_group_migrate,  # sched - group up/down migrate
     (0x4, 0x0): core_ctl.resolve_lock_min_cores,  # core_ctl - lock_min_cores
     (0x4, 0x2): cluster.resolve_cpu_cluster,  # core_ctl - enable
-    **{
-        (0x5, sub): cluster.resolve_cpu_cluster
-        for sub in range(0x0, 0x17)
-    }, # cpu governor tuning
+    **{(0x5, sub): cluster.resolve_cpu_cluster for sub in range(0x0, 0x17)},  # cpu governor tuning
     (0x6, 0x3): hyst.resolve_hyst_opt_path,  # CPUBW_HWMON_HYST_OPT_OPCODE
     (0x6, 0xE): hyst.resolve_hyst_opt_path,  # CPU_LLCC_BW_HYST_OPT
     (0x6, 0x17): hyst.resolve_hyst_opt_path,  # GOLD_CPU_LLCC_BW_HYST_OPT

@@ -146,7 +146,11 @@ if __name__ == '__main__':
             actions.append((path, value))
 
         generated_powerhints.append(
-            PowerHint(name=powerhint_name, duration=boost.timeout if powerhint_name != "CAMERA_LAUNCH" else 1000, actions=actions)
+            PowerHint(
+                name=powerhint_name,
+                duration=boost.timeout if powerhint_name != 'CAMERA_LAUNCH' else 1000,
+                actions=actions,
+            )
         )
 
     generate_powerhint_json(generated_powerhints, 'powerhint.json')
