@@ -111,7 +111,7 @@ if __name__ == '__main__':
 
             resource_key: ResourceKey = (major, minor)
             if resource_key not in resource_config:
-                print(f'resource 0x{hex(opcode)} is not defined!')
+                print(f'resource {hex(opcode)} is not defined!')
                 continue
             resource: ResourceEntry = resource_config[resource_key]
 
