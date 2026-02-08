@@ -1,6 +1,7 @@
+from typing import Dict
+
 from powerhint_json.models import NodeFactory
 from powerhint_json.node_factory import cpu_dma_latency, msm_perf, sched_migrate
-from typing import Dict
 
 node_factories: Dict[str, NodeFactory] = {
     # path: node factory

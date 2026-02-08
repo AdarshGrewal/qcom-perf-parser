@@ -1,6 +1,7 @@
-from perf_parser.models import ResourceContext, ResolvedPair
-from perf_parser.utils.constants import SCHED_MIGRATE_VALUE_UNSET
 from typing import Iterable, Tuple
+
+from perf_parser.models import ResolvedPair, ResourceContext
+from perf_parser.utils.constants import SCHED_MIGRATE_VALUE_UNSET
 
 
 def _decode_raw_value(value: int) -> Tuple[int, int]:

@@ -1,6 +1,7 @@
-from perf_parser.models import ResourceContext, ResolvedPair
-from perf_parser.utils.cpu import get_cpus_for_cluster, get_next_available_frequency_for_cluster
 from typing import Iterable
+
+from perf_parser.models import ResolvedPair, ResourceContext
+from perf_parser.utils.cpu import get_cpus_for_cluster, get_next_available_frequency_for_cluster
 
 
 def resolve_msm_perf(ctx: ResourceContext) -> Iterable[ResolvedPair]:

@@ -1,4 +1,3 @@
-from perf_parser.models import ResourceContext
 from typing import List
 
 

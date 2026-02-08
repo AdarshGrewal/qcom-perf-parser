@@ -1,5 +1,6 @@
-from perf_parser.models import ResourceContext, ResolvedPair
 from typing import Iterable
+
+from perf_parser.models import ResolvedPair, ResourceContext
 
 
 def resolve_hyst_opt_path(ctx: ResourceContext) -> Iterable[ResolvedPair]:

@@ -1,6 +1,7 @@
-from powerhint_json.models import Node, DefaultGetter
-from typing import OrderedDict
 import subprocess
+from typing import OrderedDict
+
+from powerhint_json.models import DefaultGetter, Node
 
 
 def create_node(name: str, path: str, values: set[str]) -> Node:

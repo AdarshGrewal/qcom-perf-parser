@@ -1,6 +1,7 @@
-from perf_parser.models import ResourceKey, ResourceCombiner
-from perf_parser.resource_combiners import msm_perf, sched_migrate
 from typing import Dict
+
+from perf_parser.models import ResourceCombiner, ResourceKey
+from perf_parser.resource_combiners import msm_perf, sched_migrate
 
 resource_combiners: Dict[ResourceKey, ResourceCombiner] = {
     # (major, minor): handler

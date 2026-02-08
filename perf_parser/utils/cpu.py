@@ -1,6 +1,7 @@
-from perf_parser.models import TargetInfo
-from typing import Iterable
 import subprocess
+from typing import Iterable
+
+from perf_parser.models import TargetInfo
 
 
 def get_cpu_index_for_cluster(target_info: TargetInfo, cluster_id: int) -> int:

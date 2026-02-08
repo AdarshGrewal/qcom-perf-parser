@@ -1,6 +1,5 @@
 from typing import Callable, List, OrderedDict
 
-
 Node = OrderedDict[str, str | int | bool | List[str]]
 Action = OrderedDict[str, str | int]
 

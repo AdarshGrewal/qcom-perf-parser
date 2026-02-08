@@ -1,4 +1,9 @@
-from perf_parser.parsers import boostsconfig, resourceconfigs, targetinfo
+import argparse
+import os
+import sys
+from collections import defaultdict
+from typing import DefaultDict, List, Optional, Tuple
+
 from perf_parser.models import (
     Boost,
     BoostKey,
@@ -10,14 +15,10 @@ from perf_parser.models import (
     ResourceKey,
     TargetInfo,
 )
-from powerhint_json.generator import generate_powerhint_json
-from perf_parser.resource_resolvers.mapping import resource_resolvers
+from perf_parser.parsers import boostsconfig, resourceconfigs, targetinfo
 from perf_parser.resource_combiners.mapping import resource_combiners
-import sys
-import os
-import argparse
-from typing import DefaultDict, List, Tuple, Optional
-from collections import defaultdict
+from perf_parser.resource_resolvers.mapping import resource_resolvers
+from powerhint_json.generator import generate_powerhint_json
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='QCOM perf config parser')

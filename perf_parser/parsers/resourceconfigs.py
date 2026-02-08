@@ -1,9 +1,7 @@
 import sys
 import xml.etree.ElementTree as ET
-from dataclasses import dataclass
-from typing import Dict, Tuple, Optional
 
-from perf_parser.models import ResourceEntry, ResourceKey, ResourceConfig
+from perf_parser.models import ResourceConfig, ResourceEntry, ResourceKey
 
 
 def parse_base_config(filename: str) -> ResourceConfig:

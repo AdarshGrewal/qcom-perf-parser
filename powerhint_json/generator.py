@@ -1,12 +1,11 @@
+import json
+from collections import defaultdict
+from typing import Dict, List, OrderedDict
+
 from perf_parser.models import PowerHint, ResolvedPair
+from powerhint_json.models import Action, Node, NodeFactory
 from powerhint_json.node_factory.default import create_node
 from powerhint_json.node_factory.mapping import node_factories
-from powerhint_json.models import Action, Node, NodeFactory
-from typing import Dict, List, OrderedDict
-from collections import defaultdict
-from dataclasses import dataclass
-import json
-import subprocess
 
 
 def _generate_name(path: str) -> str:

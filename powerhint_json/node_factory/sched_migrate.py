@@ -1,7 +1,8 @@
-from powerhint_json.models import Node
-from powerhint_json.node_factory.default import create_node_default
 import subprocess
 import sys
+
+from powerhint_json.models import Node
+from powerhint_json.node_factory.default import create_node_default
 
 
 def _get_default_value(path: str, values: set[str]) -> str:

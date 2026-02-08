@@ -1,7 +1,7 @@
-from powerhint_json.models import Node
-from powerhint_json.node_factory.default import create_node_default
-from typing import OrderedDict
 import subprocess
+from typing import OrderedDict
+
+from powerhint_json.models import Node
 
 
 def create_node(name: str, path: str, values: set[str]) -> Node:

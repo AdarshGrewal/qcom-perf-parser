@@ -1,9 +1,10 @@
-from perf_parser.models import ResourceContext, ResolvedPair
+from typing import Iterable
+
+from perf_parser.models import ResolvedPair, ResourceContext
 from perf_parser.utils.cpu import (
     get_cpu_index_for_cluster,
     get_next_available_frequency_for_cluster,
 )
-from typing import Iterable
 
 
 def resolve_walt_path(ctx: ResourceContext) -> Iterable[ResolvedPair]:

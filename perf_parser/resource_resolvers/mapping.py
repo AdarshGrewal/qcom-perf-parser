@@ -1,3 +1,5 @@
+from typing import Dict
+
 from perf_parser.models import ResourceKey, ResourceResolver
 from perf_parser.resource_resolvers import (
     cluster,
@@ -8,7 +10,6 @@ from perf_parser.resource_resolvers import (
     sched_migrate,
     walt,
 )
-from typing import Dict
 
 resource_resolvers: Dict[ResourceKey, ResourceResolver] = {
     (0x2, 0x0): msm_perf.resolve_msm_perf,  # msm_perf - min freq

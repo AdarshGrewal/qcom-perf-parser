@@ -1,6 +1,7 @@
-from powerhint_json.models import Node, DefaultGetter
-from typing import OrderedDict
 import subprocess
+from typing import OrderedDict
+
+from powerhint_json.models import DefaultGetter, Node
 
 
 def create_node_min(name: str, path: str, values: set[str]) -> Node:
@@ -25,8 +26,9 @@ def create_node_max(name: str, path: str, values: set[str]) -> Node:
         name,
         path,
         values,
-        lambda path,
-        values: '0:9999999 1:9999999 2:9999999 3:9999999 4:9999999 5:9999999 6:9999999 7:9999999',
+        lambda path, values: (
+            '0:9999999 1:9999999 2:9999999 3:9999999 4:9999999 5:9999999 6:9999999 7:9999999'
+        ),
     )
 
 

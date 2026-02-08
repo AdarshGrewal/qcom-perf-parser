@@ -1,5 +1,5 @@
-from typing import Iterable
 import subprocess
+from typing import Iterable
 
 
 def get_available_frequencies() -> Iterable[int]:
@@ -8,7 +8,7 @@ def get_available_frequencies() -> Iterable[int]:
             'adb',
             'shell',
             'cat',
-            f'/sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies',
+            '/sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies',
         ],
         text=True,
     )

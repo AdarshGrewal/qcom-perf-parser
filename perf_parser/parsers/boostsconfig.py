@@ -1,7 +1,6 @@
 import sys
 import xml.etree.ElementTree as ET
-from dataclasses import dataclass
-from typing import List, Tuple, Optional
+from typing import List, Optional, Tuple
 
 from perf_parser.models import Boost
 
