@@ -27,11 +27,12 @@ def create_node_default(
     # avoid duplication of the default value
     if default_value in values:
         values.remove(default_value)
+    sorted_values = sorted(values)
 
     return {
         'Name': name,
         'Path': path,
-        'Values': [default_value] + list(values),
+        'Values': [default_value] + sorted_values,
         'DefaultIndex': 0,
         'ResetOnInit': True,
     }
