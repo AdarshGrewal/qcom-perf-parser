@@ -49,5 +49,7 @@ def create_node_msm_perf(
             ('Name', name),
             ('Path', path),
             ('Values', [default_value] + sorted_values),
+            ('DefaultIndex', 0),
+            ('ResetOnInit', True),
         ]
     )
